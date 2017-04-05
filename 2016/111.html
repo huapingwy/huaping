@@ -1,0 +1,596 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Circles with segments</title>
+
+    <!--styles-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        /**
+         * Remove default margin.
+         */
+        body, p {
+            margin: 0;
+        }
+
+        /**
+         * Remove the gray background color from active links in IE 10.
+         */
+        a {
+            background-color: transparent;
+        }
+
+        /**
+         * Improve readability when focused and also mouse hovered in all browsers.
+         */
+        a:active,
+        a:hover {
+            text-decoration: none;
+            outline: 0;
+        }
+
+        body {
+            background: #ececec;
+            color: #fff;
+        }
+
+
+        /* WRAPPER FOR ALL ELEMENTS */
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        h1, h2, h3, h4, h5 {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        img {
+            border: 0;
+        }
+
+        /*
+         * PIE STYLES --> Be careful when editing these elements.
+         */
+
+        nav {
+            display: block;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .pie {
+            border: 3px solid #fff;
+            border-radius: 50%;
+            -webkit-box-shadow: 0px -1px 20px 4px rgba(141, 141, 141, 0.4);
+            -moz-box-shadow: 0px -1px 20px 4px rgba(141, 141, 141, 0.4);
+            box-shadow: 0px -1px 20px 4px rgba(141, 141, 141, 0.4);
+            font: 14px "Arial", sans-serif;
+            margin: 15px auto;
+            height: 350px;
+            list-style: none;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            width: 350px;
+        }
+
+        /* PIE COLORS & COG IMG POSITION */
+        .pie.orange {
+            background: #ffa626;
+            margin: 46.5px;
+        }
+        .pie.orange .slice:hover {
+            background: #e67300;
+        }
+
+        .pie.purple {
+            background: #9238c4;
+            margin: 46.5px;
+        }
+        .pie.purple .slice:hover {
+            background: #832cb3;
+        }
+
+        .pie.blue {
+            background: #46c4e5;
+            margin: 46.5px;
+        }
+        .pie.blue .slice:hover {
+            background: #3eb1cf;
+        }
+
+        .slice {
+            border: 1px solid #fff;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 50%;
+            width: 50%;
+            transform-origin: 0% 100%;
+            -webkit-transition: background-color 0.3s ease;
+            -moz-transition: background-color 0.3s ease;
+            -o-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
+        }
+
+        .slice:hover {
+            cursor: pointer;
+        }
+
+        .slice-contents {
+            position: absolute;
+            top: 10%;
+            left: -100%;
+            width: 200%;
+            height: 200%;
+            border-radius: 50%;
+            text-align: center;
+            transition: background-color .5s;
+        }
+
+        /* ORANGE CIRCLE STYLES */
+        .orange-wrapper {
+            margin-left: 5%;
+            position: relative;
+        }
+
+        /* Background image */
+        .orange-wrapper img {
+            height: 450px;
+            width: 450px;
+            position: absolute;
+        }
+
+        .orange .segment-1 {
+            transform: rotate(0deg) skewY(-30deg);
+        }
+
+        .orange .segment-1 .slice-contents {
+            transform: skewY(30deg) rotate(30deg);
+            left: -110%;
+        }
+
+        .orange .segment-1 .text {
+            transform: rotate(-30deg);
+        }
+
+        .orange .segment-2 {
+            transform: rotate(60deg) skewY(-30deg);
+        }
+        .orange .segment-2 .slice-contents {
+            transform: skewY(30deg) rotate(30deg);
+            left: -121%;
+            top: 20%;
+        }
+        .orange .segment-2 .text {
+            transform: rotate(-90deg);
+        }
+        .orange .segment-3 {
+            transform: rotate(120deg) skewY(-30deg);
+        }
+        .orange .segment-3 .slice-contents {
+            transform: skewY(30deg) rotate(30deg);
+            top: 14%;
+            left: -120%;
+        }
+        .orange .segment-3 .text {
+            transform: rotate(210deg);
+        }
+        .orange .segment-4 {
+            transform: rotate(180deg) skewY(-30deg);
+        }
+        .orange .segment-4 .slice-contents {
+            transform: skewY(30deg) rotate(30deg);
+            top: 18%;
+            left: -110%;
+        }
+        .orange .segment-4 .text {
+            transform: rotate(151deg);
+        }
+        .orange .segment-5 {
+            transform: rotate(240deg) skewY(-30deg); }
+        .orange .segment-5 .slice-contents {
+            transform: skewY(30deg) rotate(30deg);
+            left: -115%;
+            top: 20%;
+        }
+        .orange .segment-5 .text {
+            transform: rotate(90deg);
+        }
+        .orange .segment-6 {
+            transform: rotate(300deg) skewY(-30deg);
+        }
+        .orange .segment-6 .slice-contents {
+            transform: skewY(30deg) rotate(30deg);
+            left: -109%; }
+        .orange .segment-6 .text {
+            transform: rotate(30deg);
+        }
+
+        /*
+         * BLUE CIRCLE STYLES
+         */
+
+        .blue-wrapper {
+            top: 250px;
+            position: relative;
+        }
+
+        /* Background image */
+        .blue-wrapper img {
+            height: 450px;
+            width: 450px;
+            position: absolute;
+        }
+
+        .blue .segment-1 {
+            transform: rotate(-36deg) skewY(-18deg);
+        }
+        .blue .segment-1 .slice-contents {
+            transform: skewY(18deg) rotate(30deg);
+            left: -109%;
+            top: 28%;
+        }
+        .blue .segment-1 .text {
+            transform: rotate(6deg);
+        }
+        .blue .segment-2 {
+            transform: rotate(36deg) skewY(-18deg);
+        }
+        .blue .segment-2 .slice-contents {
+            transform: skewY(18deg) rotate(30deg);
+            left: -105%;
+            top: 28%;
+        }
+        .blue .segment-2 .text {
+            transform: rotate(-65deg);
+        }
+        .blue .segment-3 {
+            transform: rotate(108deg) skewY(-18deg);
+        }
+        .blue .segment-3 .slice-contents {
+            transform: skewY(18deg) rotate(30deg);
+            top: 17%;
+            left: -109%;
+        }
+        .blue .segment-3 .text {
+            transform: rotate(222deg);
+        }
+        .blue .segment-4 {
+            transform: rotate(180deg) skewY(-18deg);
+        }
+        .blue .segment-4 .slice-contents {
+            transform: skewY(18deg) rotate(30deg);
+            left: -107%;
+            top: 32%;
+        }
+        .blue .segment-4 .text {
+            transform: rotate(151deg);
+        }
+        .blue .segment-5 {
+            transform: rotate(252deg) skewY(-18deg);
+        }
+        .blue .segment-5 .slice-contents {
+            transform: skewY(18deg) rotate(30deg);
+            left: -109%;
+            top: 28%;
+        }
+        .blue .segment-5 .text {
+            transform: rotate(79deg);
+        }
+
+        /*
+         * PURPLE CIRCLE STYLES
+         */
+
+        .purple-wrapper {
+            margin-right: 5%;
+            position: relative;
+        }
+
+        /* Background image */
+        .purple-wrapper img {
+            height: 450px;
+            width: 450px;
+            position: absolute;
+        }
+
+
+        .purple .segment-1 {
+            transform: rotate(0deg);
+        }
+        .purple .segment-1 .slice-contents {
+            transform: rotate(30deg);
+            left: -100%;
+            top: 40%;
+        }
+        .purple .segment-1 .text {
+            transform: rotate(-30deg);
+        }
+        .purple .segment-2 {
+            transform: rotate(90deg);
+        }
+        .purple .segment-2 .slice-contents {
+            transform: rotate(30deg);
+            left: -111%;
+            top: 33%;
+        }
+        .purple .segment-2 .text {
+            transform: rotate(-120deg);
+        }
+        .purple .segment-3 {
+            transform: rotate(180deg);
+        }
+        .purple .segment-3 .slice-contents {
+            transform: rotate(30deg);
+            top: 37%;
+            left: -100%;
+        }
+        .purple .segment-3 .text {
+            transform: rotate(150deg);
+        }
+        .purple .segment-4 {
+            transform: rotate(270deg);
+        }
+        .purple .segment-4 .slice-contents {
+            transform: rotate(30deg);
+            left: -107%;
+            top: 35%;
+        }
+        .purple .segment-4 .text {
+            transform: rotate(60deg);
+        }
+
+
+        /* MEDIA QUERIES
+         * Feel free to play around with these if you want a better experience
+         */
+
+        /* Tablets */
+        @media screen and (max-width: 996px) {
+
+            .pie {
+                font-size: 13px;
+
+                height: 350px;
+                width: 350px;
+            }
+
+            .orange-wrapper, .blue-wrapper, .purple-wrapper {
+                margin-bottom: 5%;
+                margin-left: 5%;
+                margin-top: 2.5%;
+                top: 0;
+            }
+
+        }
+
+        /* Tablet to Laptop */
+        @media screen and (min-width: 997px)
+        and (max-width: 1500px) {
+            .purple-wrapper {
+                bottom: 100px;
+                left: 400px;
+                margin-right: 5%;
+
+            }
+
+            .blue-wrapper {
+                top: 0;
+            }
+
+        }
+
+        /* Mobile Phones */
+        @media screen and (max-width: 479px) {
+            .pie {
+                font-size: 11px;
+                width: 270px;
+                height: 270px;
+            }
+
+            .pie-orange, .pie-blue, .pie-purple {
+                margin: 37.5px;
+            }
+
+
+            .orange-wrapper, .blue-wrapper, .purple-wrapper {
+                margin-bottom: 5%;
+                margin-left: 5%;
+                margin-top: 2.5%;
+                top: 0;
+            }
+
+            .orange-wrapper img, .blue-wrapper img, .purple-wrapper img {
+                margin: 2.5%;
+                height: 350px;
+                width: 350px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!--PIE ORANGE -->
+    <ul class='pie orange'>
+        <li class='slice segment-1'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 1</h3>
+                    <p>High quality <br> general practice</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-2'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 2</h3>
+                    <p>Are we there yet?</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-3'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 3</h3>
+                    <p>What is Quality?</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-4'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 4</h3>
+                    <p>Patient value <br> streams</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-5'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 5</h3>
+                    <p>What is QI?</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-6'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 6</h3>
+                    <p>Protected Time</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    <!--PIE BLUE -->
+    <ul class='pie blue'>
+        <li class='slice segment-1'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 1</h3>
+                    <p>Fundamental <br> Questions</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-2'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 2</h3>
+                    <p>Q1 What are we <br> trying to achieve?</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-3'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 3</h3>
+                    <p>Q2 Measuring for <br> improvement</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-4'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 4</h3>
+                    <p>Q3 Changing Ideas</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-5'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 5</h3>
+                    <p>PDSAs</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    <!--PIE PURPLE-->
+    <ul class='pie purple'>
+        <li class='slice segment-1'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 1</h3>
+                    <p>Kotter's change model</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-2'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 2</h3>
+                    <p>Engaging your team</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-3'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 3</h3>
+                    <p>Measures of team <br> engagement</p>
+                </div>
+            </div>
+        </li>
+
+        <li class='slice segment-4'>
+            <div class='slice-contents'>
+                <div class="text">
+                    <h3>Section 4</h3>
+                    <p>The Real Work</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div><!--!wrapper-->
+
+</body>
+</html>

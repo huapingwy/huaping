@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s
+    }
+    .fade-enter, .fade-leave-active {
+        opacity: 0
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p :title="message">{{ message }}</p>
+        <p v-if="seen">seen</p>
+        <ul>
+            <li v-for="item in list">{{item.name}}</li>
+        </ul>
+        <button v-on:click="revreseMessage">revreseMessage</button>
+        <input v-focus type="text" v-model="message">
+        <todo-item v-for="item in list" v-bind:todo="item"></todo-item>
+
+        <button v-on:click="show = !show">Toggle</button>
+        <transition name="fade">
+            <p v-if="show">hello</p>
+        </transition>
+    </div>
+    <div id="mount-point">
+
+    </div>
+</body>
+<script>
+  // 注册一个全局自定义指令 v-focus
+  Vue.directive('focus', {
+    bind(el, binding, vnode) {
+      console.log(el,binding,vnode)
+    },
+    inserted(el){
+      console.log(111)
+      el.focus();
+    },
+    update(el){
+      console.log(el)
+    }
+  })
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!',
+            seen: false,
+            list: [
+                {name: 'Learn Vue'},
+                {name: 'Learn JavaScript'}
+            ],
+            show: true
+        },
+        methods: {
+            revreseMessage: function functionName() {
+                this.message = 'Hello Vue!';
+            }
+        },
+        components: {
+            'todo-item': {
+                props: ['todo'],
+                template: '<div>{{todo.name}}</div>'
+            }
+        },
+        watch: {
+          message(val, oldVal){
+            console.log(val, oldVal);
+          }
+        }
+    })
+    const Profile = Vue.extend({
+      template: '<p>{{name}}</p>',
+      data(){
+        return {
+          name: "huaping"
+        }
+      }
+    })
+    new Profile().$mount("#mount-point");
+</script>
+</html>

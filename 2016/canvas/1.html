@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			background: #eee;
+		}
+		canvas {
+			background: #fff;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400">不支持canvas</canvas>
+	<script>
+		var canvas = document.getElementById('canvas');
+		var ctx = canvas.getContext("2d");
+
+		/*ctx.fillStyle = "#333";
+        ctx.fillRect (10, 10, 100, 100);
+
+        
+        ctx.strokeStyle = '#ccc';
+        ctx.strokeRect(30,30, 100, 100)*/
+
+		/*ctx.beginPath();
+		ctx.moveTo(100, 100);
+		ctx.lineTo(50, 150);
+		ctx.lineTo(100, 200);
+		ctx.closePath();
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(200,200,50,0, Math.PI, true);
+		ctx.stroke();*/
+
+		var rectangle = new Path2D();
+		rectangle.arc(100,100,50, 0, 2 * Math.PI);
+		ctx.stroke(rectangle);
+
+		var c2 = new Path2D();
+		c2.rect(200, 200, 50,50);
+		ctx.fill(c2);
+
+		ctx.beginPath();
+		ctx.moveTo(300, 300);
+		ctx.lineTo(300, 320);
+		ctx.lineTo(320, 320);
+		ctx.lineTo(320, 340);
+		ctx.stroke();
+	</script>
+</body>
+</html>
