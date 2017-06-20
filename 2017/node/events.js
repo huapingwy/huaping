@@ -1,7 +1,5 @@
 const EventsEmitter = require('events');
 
-console.log(EventsEmitter,111);
-
 const emitter = new EventsEmitter();
 
 console.dir(emitter);
