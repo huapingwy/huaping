@@ -63,9 +63,9 @@ a {
   position: absolute;
 }
 .xle-detail .text-box {
-  top: 19%;
-  left: 20%;
-  width: 43%;
+  top: 16%;
+  left: 26%;
+  width: 55%;
   opacity: 0;
 }
 .xle-detail .text-box .text {
@@ -81,14 +81,14 @@ a {
   position: relative;
 }
 .xle-detail .text-2 {
-  left: 6%;
-  width: 19%;
+  left: 0;
+  width: 26%;
   top: 47%;
   opacity: 0;
 }
 .xle-detail .text-3 {
-  left: 10%;
-  width: 19%;
+  left: 4%;
+  width: 26%;
   top: 75%;
   opacity: 0;
 }
@@ -163,6 +163,51 @@ a {
 }
 .tip-box .content p {
   color: #fff;
+}
+.menu-box {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 3;
+}
+.menu-box .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #000;
+  opacity: 0.5;
+  filter: filter:alpha(opacity=50);
+}
+.menu {
+  display: inline-block;
+  height: 72px;
+  position: relative;
+  z-index: 4;
+}
+.menu li {
+  display: inline-block;
+}
+.menu li.btn-icon {
+  height: 72px;
+  width: 273px;
+  background: url("../image/menu-btn.png") no-repeat top left;
+}
+.menu li.btn-icon.active a {
+  background: none;
+}
+.menu li a {
+  line-height: 72px;
+  display: inline-block;
+  width: 115px;
+  text-align: center;
+  color: #fff;
+}
+.menu li.active a {
+  background: #333;
 }
 .section1 {
   position: relative;
@@ -288,53 +333,9 @@ a {
   opacity: 0;
   filter: filter:alpha(opacity=0);
 }
-.menu-box {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  text-align: center;
-  z-index: 3;
-}
-.menu-box .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background: #000;
-  opacity: 0.5;
-  filter: filter:alpha(opacity=50);
-}
-.menu {
-  display: inline-block;
-  height: 72px;
-  position: relative;
-  z-index: 4;
-}
-.menu li {
-  display: inline-block;
-}
-.menu li.btn-icon {
-  height: 72px;
-  width: 273px;
-  background: url("../image/menu-btn.png") no-repeat top left;
-}
-.menu li.btn-icon.active a {
-  background: none;
-}
-.menu li a {
-  line-height: 72px;
-  display: inline-block;
-  width: 115px;
-  text-align: center;
-  color: #fff;
-}
-.menu li.active a {
-  background: #333;
-}
 .section2 {
   background: url("../image/main-bg-2.jpg") no-repeat bottom center;
+  background-size: contain;
   overflow: hidden;
 }
 .section2 .slide {
@@ -564,26 +565,33 @@ a {
 .section2 .car-box-2 {
   position: absolute;
   left: -19%;
-  bottom: -26%;
+  bottom: 0;
   width: 110%;
 }
 .section2 .car-box-2 .car-2 {
   width: 100%;
+  margin-bottom: -12%;
 }
 .section2 .engine-box-2 {
   position: absolute;
   bottom: 98%;
   left: 49%;
+  width: 30%;
+  max-width: 400px;
 }
 .section2 .line-2 {
   position: absolute;
-  bottom: -76%;
+  bottom: -83%;
   left: 33%;
+  width: 6%;
+}
+.section2 .engine-2 {
+  width: 100%;
 }
 .section2 .text-5 {
   position: absolute;
-  top: 0;
-  left: -367px;
+  top: 10%;
+  left: -75%;
   font-size: 30px;
   white-space: nowrap;
   color: #fff;
@@ -595,10 +603,11 @@ a {
   position: absolute;
   width: 100%;
   left: -12%;
-  bottom: -228px;
+  bottom: 0;
 }
 .section2 .car-box-3 .car-3 {
   width: 100%;
+  margin-bottom: -12%;
 }
 .section2 .car-box-3 .content-arrow-text {
   right: 46%;
@@ -607,11 +616,12 @@ a {
 .section2 .car-box-3 .line-3 {
   left: 29%;
   bottom: -21%;
+  width: 13%;
 }
 .section2 .engine-box-3 {
   position: absolute;
-  right: -215px;
-  top: -310px;
+  right: -13%;
+  top: -70%;
   width: 41%;
 }
 .section2 .engine-box-3 .engine-3 {
@@ -633,7 +643,7 @@ a {
 .section2 .engine-box-4 {
   right: 38%;
   width: 37%;
-  top: -400px;
+  top: -100%;
 }
 .section2 .engine-box-4 .engine-4 {
   width: 100%;
@@ -649,7 +659,7 @@ a {
 .section2 .line-4 {
   bottom: -34%;
   left: 32%;
-  height: 380px;
+  width: 3%;
 }
 .section3 p {
   line-height: 40px;
@@ -787,7 +797,8 @@ a {
   position: absolute;
 }
 .section5 {
-  background: url("../image/section5/bg-1.jpg") no-repeat center center;
+  background: url("../image/section5/bg-1.jpg") no-repeat top center;
+  background-size: 100% 100%;
   color: #fff;
 }
 .section5 .slide {
@@ -795,27 +806,29 @@ a {
 }
 .section5 .car-box {
   position: absolute;
-  width: 960px;
-  margin-left: -480px;
+  width: 80%;
+  margin-left: -40%;
   left: 50%;
-  top: 14%;
-  min-height: 720px;
+  top: 0;
+  max-width: 960px;
+  margin-top: 72px;
 }
 .section5 .car-box .car-1 {
   width: 77%;
+  margin-top: 5%;
 }
 .section5 .car-box .car-2 {
   position: absolute;
-  top: 34%;
+  top: 55%;
   left: -1%;
   width: 77%;
 }
 .section5 .car-box .tip-box-1 {
-  top: 55%;
+  top: 89%;
   left: 35%;
 }
 .section5 .car-box .tip-box-2 {
-  top: 17%;
+  top: 40%;
   left: -20%;
 }
 .section5 .nav {

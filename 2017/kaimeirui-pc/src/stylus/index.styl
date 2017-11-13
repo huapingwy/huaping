@@ -35,9 +35,9 @@ a
 	.text-box, .text-2, .xle-arrow2, .text-3
 		position absolute
 	.text-box
-		top 19%
-		left 20%
-		width 43%
+		top 16%
+		left 26%
+		width 55%
 		opacity 0
 		.text
 			position absolute
@@ -50,13 +50,13 @@ a
 			width 28%
 			position relative
 	.text-2
-		left 6%
-		width 19%
+		left 0
+		width 26%
 		top 47%
 		opacity 0
 	.text-3
-		left 10%
-		width 19%
+		left 4%
+		width 26%
 		top 75%
 		opacity 0
 	img
@@ -120,6 +120,47 @@ a
 		line-height 28px
 		p
 			color #fff
+.menu-box
+	position absolute
+	width 100%
+	left 0
+	top 0
+	text-align center
+	z-index 3
+	.bg
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 72px
+		background #000
+		opacity 0.5
+		filter unquote('filter:alpha(opacity=50)')
+
+.menu
+	display inline-block
+	height 72px
+	position relative
+	z-index 4
+	li
+		display inline-block
+		&.btn-icon
+			height 72px
+			width 273px
+			background url('../image/menu-btn.png') no-repeat top left
+			&.active
+				a
+					background none
+		a
+			line-height 72px
+			display inline-block
+			width 115px
+			text-align center
+			color #fff
+		&.active
+			a
+				background #333
+				
 .section1
 	position relative 
 	overflow hidden
@@ -226,49 +267,10 @@ a
 		left 130px
 		opacity 0
 		filter unquote('filter:alpha(opacity=0)')
-.menu-box
-	position absolute
-	width 100%
-	left 0
-	top 0
-	text-align center
-	z-index 3
-	.bg
-		position absolute
-		top 0
-		left 0
-		width 100%
-		height 72px
-		background #000
-		opacity 0.5
-		filter unquote('filter:alpha(opacity=50)')
-
-.menu
-	display inline-block
-	height 72px
-	position relative
-	z-index 4
-	li
-		display inline-block
-		&.btn-icon
-			height 72px
-			width 273px
-			background url('../image/menu-btn.png') no-repeat top left
-			&.active
-				a
-					background none
-		a
-			line-height 72px
-			display inline-block
-			width 115px
-			text-align center
-			color #fff
-		&.active
-			a
-				background #333
 		
 .section2
 	background url('../image/main-bg-2.jpg') no-repeat bottom center
+	background-size contain
 	.slide
 		position relative
 		overflow hidden
@@ -443,22 +445,28 @@ a
 	.car-box-2
 		position absolute
 		left -19%
-		bottom -26%
+		bottom 0
 		width 110%
 		.car-2
 			width 100%
+			margin-bottom -12%
 	.engine-box-2
 		position absolute
 		bottom 98%
 		left 49%
+		width 30%
+		max-width 400px
 	.line-2
 		position absolute
-		bottom -76%
+		bottom -83%
 		left 33%
+		width 6%
+	.engine-2
+		width 100%
 	.text-5
 		position absolute
-		top 0
-		left -367px
+		top 10%
+		left -75%
 		font-size 30px
 		white-space nowrap
 		color #fff
@@ -468,19 +476,21 @@ a
 		position absolute
 		width 100%
 		left -12%
-		bottom -228px
+		bottom 0
 		.car-3
 			width 100%
+			margin-bottom -12%
 		.content-arrow-text
 			right 46%
 			top -34%
 		.line-3
 			left 29%
 			bottom -21%
+			width 13%
 	.engine-box-3
 		position absolute
-		right -215px
-		top -310px
+		right -13%
+		top -70%
 		width 41%
 		.engine-3
 			position relative
@@ -496,7 +506,7 @@ a
 	.engine-box-4
 		right 38%
 		width 37%
-		top -400px
+		top -100%
 		.engine-4
 			width 100%
 			position relative
@@ -509,7 +519,7 @@ a
 	.line-4
 		bottom -34%
 		left 32%
-		height 380px	
+		width 3%
 		
 		
 
@@ -622,29 +632,32 @@ a
 		position absolute
 
 .section5
-	background url('../image/section5/bg-1.jpg') no-repeat center center
+	background url('../image/section5/bg-1.jpg') no-repeat top center
+	background-size 100% 100%
 	color #fff
 	.slide
 		position relative
 	.car-box
 		position absolute
-		width 960px
-		margin-left -480px
+		width 80%
+		margin-left -40%
 		left 50%
-		top 14%
-		min-height 720px
+		top 0
+		max-width 960px
+		margin-top 72px
 		.car-1
 			width 77%
+			margin-top 5%
 		.car-2
 			position absolute
-			top 34%
+			top 55%
 			left -1%
 			width 77%
 		.tip-box-1
-			top 55%
+			top 89%
 			left 35%
 		.tip-box-2
-			top 17%
+			top 40%
 			left -20%
 	.nav
 		width 60%
