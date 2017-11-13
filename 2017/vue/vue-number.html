@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue-number</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="exmaple">
+		<input type="number" :value="number" @keydown="keyupEvent" name="">
+		<pre>{{number}}</pre>
+	</div>
+	<input type="text" name="" class="test2">
+	<script>
+		const vm = new Vue({
+			el: '#exmaple',
+			data() {
+				return {
+					filterValue: undefined,
+					number: undefined
+				};
+			},
+			methods: {
+				keyupEvent(e) {
+					return false;
+				}		
+			}
+		});
+
+		const re = /^\d+$/gi;
+		let values = '';
+		
+		document.querySelector('.test2').onkeydown = function (e) {
+			if ((e.keyCode >= 48 && e.keyCode <= 57) || e.keyCode === 8 || (e.keyCode >= 37 && e.keyCode <= 40) || (e.keyCode >= 96 && e.keyCode <= 105)) {
+				values = e.target.value;
+				return true;
+			} else {
+				return false;
+			}
+		}
+		document.querySelector('.test2').onkeyup = function (e) {
+			console.log(values)
+		}
+	</script>
+</body>
+</html>

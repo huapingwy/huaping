@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Observer</title>
+</head>
+<body>
+  <script>
+    var data = {name: 'huaping'};
+    observer(data);
+    data.name = "huang";
+    function observer(data) {
+      if (!data || typeof data !== 'object') {
+        return;
+      }
+      // 取出所有属性遍历
+      Object.keys(data).forEach(function(key) {
+        defineReactive(data, key, data[key]);
+      });
+    };
+
+    function defineReactive(data, key, val) {
+      const dep = new Dep();
+      observer(val);
+      Object.defineProperty(data, key, {
+        enumerable: true,
+        configurable: false,
+        get() {
+          return val;
+        },
+        set(newVal) {
+          console.log('哈哈哈，监听到值变化了 ', val, ' --> ', newVal);
+          val = newVal;
+          dep.notify();
+        }
+      });
+    };
+
+    function Dep() {
+      this.subs = [];
+    };
+
+    Dep.prototype = {
+      addSubs(sub) {
+        this.subs.push(sub);
+      },
+      notify() {
+        this.subs.forEach((sub) => {
+          sub.update();
+        });
+      }
+    };
+
+  </script>
+</body>
+</html>

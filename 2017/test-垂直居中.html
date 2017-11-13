@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>垂直居中</title>
+	<style type="text/css">
+		.parent1 {
+			display: table;
+		}
+		.child1 {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.test-box {
+			background: #eee;
+			padding-top: 200px;
+			width: 100%;
+		}
+		.test-box:after {
+			content: 'huaping';
+		}
+	</style>
+</head>
+<body>
+	<div class="parent1">
+		<div class="child1">Center here</div>
+	</div>
+	<div class="test-box"></div>
+</body>
+</html>
