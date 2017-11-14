@@ -41,20 +41,18 @@ a {
   top: 0;
   text-align: center;
   color: #fff;
+  width: 20%;
+  max-width: 240px;
 }
-.content-arrow-text img {
+.content-arrow-text .arrow-img {
+  position: relative;
+  width: 100%;
+}
+.content-arrow-text .text {
   position: absolute;
-  top: -52px;
-  left: 95px;
-  width: 60%;
-}
-.content-arrow-text strong,
-.content-arrow-text span {
-  display: block;
-}
-.content-arrow-text strong {
-  font-size: 48px;
-  margin: 10px 0;
+  top: 26%;
+  left: -51%;
+  width: 200%;
 }
 .xle-detail .text-box,
 .xle-detail .text-2,
@@ -240,11 +238,11 @@ a {
 }
 .section1 .car-box {
   position: absolute;
-  right: 0;
+  right: -50%;
   width: 30%;
-  bottom: 50%;
+  bottom: 70%;
   margin-bottom: -28%;
-  max-width: 90%;
+/*max-width 90%*/
   opacity: 0;
   filter: filter:alpha(opacity=0);
 }
@@ -335,7 +333,7 @@ a {
 }
 .section2 {
   background: url("../image/main-bg-2.jpg") no-repeat bottom center;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
 }
 .section2 .slide {
@@ -374,9 +372,9 @@ a {
   position: absolute;
   bottom: -12px;
   right: -2000px;
+  bottom: -5%;
 }
 .section2 .car-box .car {
-  position: relative;
   width: 100%;
 }
 .section2 .car-box .wheel,
@@ -396,21 +394,16 @@ a {
 .section2 .desc1-box {
   position: absolute;
   top: 0;
-  left: 50%;
-  margin-left: -480px;
-  width: 960px;
+  left: 0;
+  width: 100%;
   height: 100%;
   z-index: 4;
   opacity: 0;
   filter: filter:alpha(opacity=0);
 }
 .section2 .desc1-box .content-arrow-text {
-  top: 22%;
-  right: 31%;
-}
-.section2 .desc1-box .content-arrow-text img {
-  width: 85%;
-  left: 10%;
+  top: 20%;
+  right: 38%;
 }
 .section2 .desc1-box .desc-1-img {
   position: absolute;
@@ -454,6 +447,11 @@ a {
 .section2 .desc2-box .circle-box {
   position: absolute;
 }
+.section2 .desc2-box .text1 img,
+.section2 .desc2-box .text2 img,
+.section2 .desc2-box .circle-box img {
+  width: 100%;
+}
 .section2 .desc2-box .text1,
 .section2 .desc2-box .text2,
 .section2 .desc2-box .circle-box,
@@ -462,14 +460,16 @@ a {
   filter: filter:alpha(opacity=0);
 }
 .section2 .desc2-box .text2 {
-  right: 0px;
-  bottom: 395px;
-  font-size: 20px;
-  line-height: 36px;
+  right: -6%;
+  bottom: 88%;
+  width: 28%;
 }
 .section2 .desc2-box .content-arrow-text {
-  top: 20%;
+  top: -66%;
   right: 35%;
+}
+.section2 .desc2-box .content-arrow-text .text {
+  top: 29%;
 }
 .section2 .desc2-box .circle-box {
   width: 28%;
@@ -478,9 +478,9 @@ a {
   bottom: 0;
 }
 .section2 .desc2-box .circle-box .text1 {
-  left: -350px;
-  top: 115px;
-  font-size: 30px;
+  right: 98%;
+  width: 85%;
+  top: 19%;
 }
 .section2 .desc2-box .circle-box img {
   width: 100%;
@@ -507,14 +507,20 @@ a {
 .section2 .desc3-box .content-arrow-text {
   position: absolute;
 }
+.section2 .desc3-box .text-1 img,
+.section2 .desc3-box .text-2 img,
+.section2 .desc3-box .text-3 img,
+.section2 .desc3-box .text-4 img,
+.section2 .desc3-box .content-arrow-text img {
+  width: 100%;
+}
 .section2 .desc3-box .engine-1 {
   width: 55%;
 }
 .section2 .desc3-box .text-1 {
-  top: -62px;
+  top: -28%;
   left: 40%;
-  font-size: 24px;
-  line-height: 24px;
+  width: 30%;
 }
 .section2 .desc3-box p {
   margin: 0;
@@ -523,37 +529,30 @@ a {
   font-size: 70px;
 }
 .section2 .desc3-box .text-2 {
-  top: 56px;
+  top: 12%;
   left: 58%;
-  font-size: 30px;
-  white-space: nowrap;
+  width: 40%;
 }
 .section2 .desc3-box .text-3 {
   top: 45%;
   left: 64%;
-  font-size: 30px;
-  white-space: nowrap;
-  line-height: 40px;
+  width: 29%;
 }
 .section2 .desc3-box .text-3 span {
   display: block;
   font-size: 24px;
 }
 .section2 .desc3-box .text-4 {
-  font-size: 30px;
-  left: 19%;
-  white-space: nowrap;
+  left: 13%;
+  width: 42%;
 }
 .section2 .desc3-box .content-arrow-text {
-  right: -66%;
-  top: -110px;
-  text-align: center;
+  right: -30%;
+  top: -23%;
 }
-.section2 .desc3-box .content-arrow-text img {
-  position: absolute;
-  top: -52px;
-  left: 95px;
-  width: 60%;
+.section2 .desc3-box .content-arrow-text .text {
+  width: 220%;
+  left: -61%;
 }
 .section2 .desc3-box .content-arrow-text strong,
 .section2 .desc3-box .content-arrow-text span {
@@ -595,6 +594,10 @@ a {
   font-size: 30px;
   white-space: nowrap;
   color: #fff;
+  width: 95%;
+}
+.section2 .text-5 img {
+  width: 100%;
 }
 .section2 .text-5 p {
   line-height: 44px;
@@ -611,12 +614,11 @@ a {
 }
 .section2 .car-box-3 .content-arrow-text {
   right: 46%;
-  top: -34%;
+  top: -80%;
 }
-.section2 .car-box-3 .line-3 {
-  left: 29%;
-  bottom: -21%;
-  width: 13%;
+.section2 .car-box-3 .content-arrow-text .text {
+  width: 171%;
+  left: -36%;
 }
 .section2 .engine-box-3 {
   position: absolute;
@@ -631,11 +633,15 @@ a {
 .section2 .engine-box-3 img,
 .section2 .engine-box-3 .text-6 {
   position: absolute;
+  width: 100%;
 }
 .section2 .engine-box-3 .text-6 {
+  left: 99%;
+  bottom: 42%;
+  line-height: 30px;
+  width: 100%;
+  text-align: left;
   color: #fff;
-  font-size: 18px;
-  left: -100px;
 }
 .section2 .engine-box-3 .text-6 strong {
   font-size: 30px;
@@ -656,7 +662,7 @@ a {
   text-align: center;
   line-height: 30px;
 }
-.section2 .line-4 {
+.section2 .engine-box-4 .line-4 {
   bottom: -34%;
   left: 32%;
   width: 3%;
@@ -678,14 +684,13 @@ a {
   filter: filter:alpha(opacity=60);
 }
 .section3 .content-arrow-text {
-  right: 36%;
-  top: 165px;
+  right: 43%;
+  top: 25%;
 }
-.section3 .content-arrow-text strong {
-  font-size: 60px;
-}
-.section3 .content-arrow-text span {
-  font-size: 36px;
+.section3 .content-arrow-text .text {
+  top: 24%;
+  width: 169%;
+  left: -36%;
 }
 .section3 .switch-img {
   position: absolute;
@@ -735,9 +740,12 @@ a {
 .section3 .img-box .text-1,
 .section3 .img-box .text-2 {
   position: absolute;
-  font-size: 24px;
-  line-height: 30px;
-  color: #fff;
+  width: 36%;
+  top: -2%;
+}
+.section3 .img-box .text-1 img,
+.section3 .img-box .text-2 img {
+  width: 100%;
 }
 .section3 .img-box .text-1 strong,
 .section3 .img-box .text-2 strong {
@@ -750,11 +758,10 @@ a {
 }
 .section3 .img-box .text-1 {
   right: 16%;
-  top: -12%;
+  width: 25%;
 }
 .section3 .img-box .text-2 {
   left: 10%;
-  top: -12%;
 }
 .section4 .bg-box {
   position: absolute;
@@ -807,29 +814,44 @@ a {
 .section5 .car-box {
   position: absolute;
   width: 80%;
-  margin-left: -40%;
-  left: 50%;
+  height: 50%;
+  left: 0;
+  right: 0;
   top: 0;
+  bottom: 0;
+  margin: auto;
   max-width: 960px;
-  margin-top: 72px;
+}
+.section5 .car-box .bg {
+  position: absolute;
+  width: 300%;
+  left: -100%;
 }
 .section5 .car-box .car-1 {
   width: 77%;
-  margin-top: 5%;
+  margin-top: -13%;
 }
 .section5 .car-box .car-2 {
   position: absolute;
-  top: 55%;
+  top: 18%;
   left: -1%;
   width: 77%;
 }
 .section5 .car-box .tip-box-1 {
-  top: 89%;
+  top: 51%;
   left: 35%;
+  width: 43%;
+}
+.section5 .car-box .tip-box-1 img {
+  width: 100%;
 }
 .section5 .car-box .tip-box-2 {
-  top: 40%;
-  left: -20%;
+  top: 1%;
+  left: -14%;
+  width: 43%;
+}
+.section5 .car-box .tip-box-2 img {
+  width: 100%;
 }
 .section5 .nav {
   width: 60%;
@@ -849,29 +871,35 @@ a {
 }
 .section5 .content-arrow-text {
   top: 22%;
-  right: 5%;
+  right: 8%;
+  width: 14%;
 }
-.section5 .text-1 {
+.text {
+  width: 179%;
+  top: 23%;
+  left: -45%;
+}
+.text-1 {
   position: absolute;
   bottom: 10px;
   left: 20px;
   font-size: 14px;
   color: #999;
 }
-.section5 .text-1 strong {
+.text-1 strong {
   font-size: 16px;
   color: #ddd;
 }
-.section5 .tss {
+.tss {
   position: absolute;
   right: 10px;
   bottom: 10px;
   z-index: 10;
 }
-.section5 .slide-2 {
+.slide-2 {
   background: url("../image/section5/bg-2.jpg") repeat top center;
 }
-.section5 .slide-2 .car-box-2 {
+.slide-2 .car-box-2 {
   width: 960px;
   position: absolute;
   top: 50%;
@@ -881,11 +909,11 @@ a {
   margin-top: -500px;
   text-align: center;
 }
-.section5 .slide-2 .car-box-2 img {
+.slide-2 .car-box-2 img {
   height: 100%;
   display: inline-block;
 }
-.section5 .slide-2 .text-box {
+.slide-2 .text-box {
   position: absolute;
   background: #fff;
   width: 400px;
@@ -895,92 +923,92 @@ a {
   opacity: 0.6;
   filter: filter:alpha(opacity=60);
 }
-.section5 .slide-2 .text-box strong {
+.slide-2 .text-box strong {
   display: block;
   margin-bottom: 10px;
 }
-.section5 .slide-2 .text-2 {
+.slide-2 .text-2 {
   right: 0;
   top: 97px;
 }
-.section5 .slide-2 .text-3 {
+.slide-2 .text-3 {
   top: 97px;
   left: 0;
 }
-.section5 .slide-2 .text-4 {
+.slide-2 .text-4 {
   position: absolute;
   left: 30px;
   bottom: 30px;
   font-size: 12px;
   width: 450px;
 }
-.section5 .slide-2 .text-4 p {
+.slide-2 .text-4 p {
   line-height: 16px;
 }
-.section5 .slide-2 .text-4 strong {
+.slide-2 .text-4 strong {
   font-size: 16px;
 }
-.section5 .slide-3 p {
+.slide-3 p {
   font-size: 24px;
   line-height: 36px;
 }
-.section5 .slide-3 p strong {
+.slide-3 p strong {
   font-size: 30;
 }
-.section5 .slide-3 .box {
+.slide-3 .box {
   width: 33.33%;
   float: left;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
-.section5 .slide-3 .box img {
+.slide-3 .box img {
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.section5 .slide-3 .left-box {
+.slide-3 .left-box {
   overflow: hidden;
   background: #151b2d;
 }
-.section5 .slide-3 .left-box .text-5 {
+.slide-3 .left-box .text-5 {
   margin-top: 32%;
   margin-left: 10%;
 }
-.section5 .slide-3 .left-box .car-4 {
+.slide-3 .left-box .car-4 {
   z-index: 5;
 }
-.section5 .slide-3 .top-box {
+.slide-3 .top-box {
   position: relative;
   height: 50%;
   background: #0d0707;
 }
-.section5 .slide-3 .top-box .text-6 {
+.slide-3 .top-box .text-6 {
   position: absolute;
   bottom: 6%;
   left: 23%;
 }
-.section5 .slide-3 .top-box img {
+.slide-3 .top-box img {
   width: 80%;
   left: 10%;
   bottom: 28%;
 }
-.section5 .slide-3 .bottom-box {
+.slide-3 .bottom-box {
   position: relative;
   height: 50%;
   background: #2c2c2c;
 }
-.section5 .slide-3 .bottom-box p {
+.slide-3 .bottom-box p {
   text-align: center;
   padding-top: 12%;
 }
-.section5 .slide-3 .right-box {
+.slide-3 .right-box {
   background: #d4dfe7;
   position: relative;
   color: #333;
 }
-.section5 .slide-3 .right-box .text-6 {
+.slide-3 .right-box .text-6 {
   margin-top: 44%;
   margin-left: 10%;
 }
