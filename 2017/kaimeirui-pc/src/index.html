@@ -146,8 +146,7 @@
 				<div class="car-box-3 car-box-4">
 					<div class="engine-box-3 engine-box-4">
 						<div class="text-6">
-							<p><strong>高精度齿条并行式电动助力转向系统</strong></p>
-							<p>起步反应更加灵敏   爽快手感高精度<br />新开发的转向柱提升了刚性，让操控感更好</p>
+							<img src="image/text-12.png" alt="">
 						</div>
 						<img src="image/section2/line-3.png" alt="" class="line-4">
 						<img src="image/section2/engine-3.png" alt="" class="engine-4">
@@ -522,7 +521,7 @@
 								marginBottom: 0
 							})
 
-							$('.xle-detail .text-box').animate({
+							$('.xle-detail .text-box .text, .xle-detail .text-box .xle-arrow2').animate({
 								opacity: 1
 							})
 							s1Text1.animate({
@@ -656,9 +655,9 @@
 						s2Text1.animate({
 							opacity: 1,
 						});
-						s2Text2.animate({
+						s2Text2.css({ right: '21%'}).animate({
 							opacity: 1,
-							right: '-6%'
+							right: '-19%'
 						});
 
 						s2Text3Content.animate({
@@ -759,7 +758,7 @@
 
 					if (index === 2 && curState2 === 1) {
 						s2CarBox.animate({
-							right: '10%'
+							right: '20%'
 						}, 3000, 'easeOutSine', function () {
 							s2Desc1Box.animate({
 								opacity: 1

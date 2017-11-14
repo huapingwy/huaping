@@ -38,15 +38,16 @@ a
 		top 16%
 		left 26%
 		width 55%
-		opacity 0
 		.text
 			position absolute
 			width 55%
-			opacity 1
+			opacity 0
 			left -13%
 			top 23%
+			filter unquote('alpha(opacity=0)')
 		.xle-arrow2
-			opacity 1
+			opacity 0
+			filter unquote('alpha(opacity=0)')
 			width 28%
 			position relative
 	.text-2
@@ -62,7 +63,7 @@ a
 	img
 		width 100%
 		opacity 0
-		filter unquote('filter:alpha(opacity=0)')
+		filter unquote('alpha(opacity=0)')
 .arrow-down-btn
 	position absolute
 	z-index 15
@@ -100,7 +101,7 @@ a
 		left 50%
 		margin-left -5px
 		opacity 0.6
-		filter unquote('filter:alpha(opacity=60)')
+		filter unquote('alpha(opacity=60)')
 		width 0
 		height 0
 		overflow hidden
@@ -115,7 +116,7 @@ a
 		overflow hidden
 		background #000
 		opacity 0.6
-		filter unquote('filter:alpha(opacity=60)')
+		filter unquote('alpha(opacity=60)')
 		font-size 16px 
 		line-height 28px
 		p
@@ -135,15 +136,17 @@ a
 		height 72px
 		background #000
 		opacity 0.5
-		filter unquote('filter:alpha(opacity=50)')
+		filter unquote('alpha(opacity=50)')
 
 .menu
 	display inline-block
 	height 72px
 	position relative
 	z-index 4
+	width 100%
 	li
 		display inline-block
+		width 8%
 		&.btn-icon
 			height 72px
 			width 273px
@@ -154,7 +157,7 @@ a
 		a
 			line-height 72px
 			display inline-block
-			width 115px
+			width 100%
 			text-align center
 			color #fff
 		&.active
@@ -168,7 +171,7 @@ a
 	background-size cover
 	.arrow-down-btn
 		opacity 0
-		filter unquote('filter:alpha(opacity=0)')
+		filter unquote('alpha(opacity=0)')
 		display none
 	.xle-btn
 		position absolute
@@ -182,7 +185,7 @@ a
 		width 270px
 		z-index 5
 		opacity 0
-		filter unquote('filter:alpha(opacity=0)')
+		filter unquote('alpha(opacity=0)')
 		&:hover
 			cursor pointer
 	.car-box
@@ -193,7 +196,7 @@ a
 		margin-bottom -28%
 		/*max-width 90%*/
 		opacity 0
-		filter unquote('filter:alpha(opacity=0)')
+		filter unquote('alpha(opacity=0)')
 		.xle-box
 			position relative
 			.xle
@@ -206,7 +209,7 @@ a
 				left 0
 				width 100%
 				opacity 0
-				filter unquote('filter:alpha(opacity=0)')
+				filter unquote('alpha(opacity=0)')
 				z-index 5
 	.xse-box
 		position absolute
@@ -214,13 +217,14 @@ a
 		left 30%
 		width 30%
 		opacity 0
+		filter unquote('alpha(opacity=0)')
 		.detail
 			img
 				position absolute
 				top 0
 				let 0
 				opacity 0
-				filter unquote('filter:alpha(opacity=0)')
+				filter unquote('alpha(opacity=0)')
 			.xse-1
 				left 54%
 				width 40%
@@ -259,17 +263,17 @@ a
 			left 0
 			width 100%
 			opacity 0
-			filter unquote('filter:alpha(opacity=0)')
+			filter unquote('alpha(opacity=0)')
 		
 	.title
 		position absolute
 		top 190px
 		left 130px
 		opacity 0
-		filter unquote('filter:alpha(opacity=0)')
+		filter unquote('alpha(opacity=0)')
 		
 .section2
-	background url('../image/main-bg-2.jpg') no-repeat bottom center
+	background url('../image/main-bg-2.jpg') no-repeat top center
 	background-size cover
 	.slide
 		position relative
@@ -286,7 +290,7 @@ a
 	overflow hidden
 	.arrow-down-btn
 		opacity 0
-		filter unquote('filter:alpha(opacity=0)')
+		filter unquote('alpha(opacity=0)')
 		display none
 	.mark
 		position absolute
@@ -296,10 +300,10 @@ a
 		height 3000px
 		background #000
 		opacity 0.6
-		filter unquote('filter:alpha(opacity=60)')
+		filter unquote('alpha(opacity=60)')
 		z-index 3
 	.car-box
-		width 90%
+		width 80%
 		position absolute
 		bottom -12px
 		right -2000px
@@ -324,7 +328,8 @@ a
 		height 100%
 		z-index 4
 		opacity 0
-		filter unquote('filter:alpha(opacity=0)')
+		overflow hidden
+		filter unquote('alpha(opacity=0)')
 		.content-arrow-text
 			top 20%
 			right 38%
@@ -362,24 +367,26 @@ a
 				width 100%
 		.text1, .text2, .circle-box, .text3
 			opacity 0
-			filter unquote('filter:alpha(opacity=0)')
+			filter unquote('alpha(opacity=0)')
 		.text2
-			right -6%
-			bottom 88%
+			right -19%
+			bottom 78%
 			width 28%
 		.content-arrow-text
 			top -66%
-			right 35%
+			right 26%
 			.text
-				top 29%
+				top 26%
+				left -77%
+				width 256%
 		.circle-box
-			width 28%
+			width 36%
 			position absolute
-			left 25%
+			left 32%
 			bottom 0
 			.text1
 				right 98%
-				width 85%
+				width 65%
 				top 19%
 			img
 				width 100%
@@ -425,11 +432,13 @@ a
 			left 13%
 			width 42%
 		.content-arrow-text
-			right -30%
-			top -23%
+			right -43%
+			top -30%
+			width 27%
 			.text
 				width 220%
 				left -61%
+				top 23%
 			strong, span
 				display block
 			strong
@@ -442,7 +451,7 @@ a
 		width 110%
 		.car-2
 			width 100%
-			margin-bottom -12%
+			margin-bottom -18%
 	.engine-box-2
 		position absolute
 		bottom 98%
@@ -478,7 +487,7 @@ a
 			margin-bottom -12%
 		.content-arrow-text
 			right 46%
-			top -80%
+			top -54%
 			.text
 				width 171%
 				left -36%
@@ -494,14 +503,16 @@ a
 			position absolute
 			width 100%
 		.text-6
-			left 99%
-			bottom 42%
-			line-height 30px
-			width 100%
-			text-align left
-			color #fff
-			strong
-				font-size 30px
+			left -12%
+			bottom 77%
+			width 50%
+			img
+				position relative
+		.line-3
+			position absolute
+			width 12%
+			top 59%
+			left 29%
 	.engine-box-4
 		right 38%
 		width 37%
@@ -512,9 +523,9 @@ a
 		.text-6
 			left  106%
 			bottom 42%
-			white-space nowrap
-			text-align center
-			line-height 30px
+			width 70%
+			img
+				width 100%
 		.line-4
 			bottom -34%
 			left 32%
@@ -536,7 +547,7 @@ a
 		height 100%
 		background #000
 		opacity 0.6
-		filter unquote('filter:alpha(opacity=60)')
+		filter unquote('alpha(opacity=60)')
 	.content-arrow-text
 		right 43%
 		top 25%
@@ -591,7 +602,7 @@ a
 			top 28.4%
 			width 48.5%
 		.text-1
-			right 16%
+			left 65%
 			width 25%
 		.text-2
 			left 10%
@@ -652,10 +663,10 @@ a
 			left -100%
 		.car-1
 			width 77%
-			margin-top -13%
+			margin-top -11%
 		.car-2
 			position absolute
-			top 18%
+			top 24%
 			left -1%
 			width 77%
 		.tip-box-1
@@ -727,7 +738,7 @@ a
 			font-size 16px
 			color #333
 			opacity 0.6
-			filter unquote('filter:alpha(opacity=60)')
+			filter unquote('alpha(opacity=60)')
 			strong
 				display block
 				margin-bottom 10px
@@ -838,12 +849,16 @@ a
 			width 100%
 		.text
 			position absolute
+			width auto
+			left 10%
+			top 94%
+			width 52%
 		.text-blue
 			width 45%
 		.text-white
 			width 19%
 			left 49%
-			bottom -30%
+			top 114%
 		.text-red
 			width 38%
 			bottom -35%
