@@ -9,17 +9,25 @@
         transition: opacity .5s
     }
     .fade-enter, .fade-leave-active {
-        opacity: 0
+        opacity: 0;
     }
+    .list-enter-active, .list-leave-active {
+        transition: 1s;
+    }
+    .list-enter, .list-leave-to {
+        opacity: 0;
+    }
+
     </style>
 </head>
 <body>
     <div id="app">
         <p :title="message">{{ message }}</p>
         <p v-if="seen">seen</p>
-        <ul>
-            <li v-for="item in list">{{item.name}}</li>
-        </ul>
+        <span @click="removeList">removeList</span>
+        <transition-group name="list" tag="ul">
+            <li v-for="item in list" :key="item">{{item.name}}</li>
+        </transition-group>
         <button v-on:click="revreseMessage">revreseMessage</button>
         <input v-focus type="text" v-model="message">
         <todo-item v-for="item in list" v-bind:todo="item"></todo-item>
@@ -61,6 +69,9 @@
         methods: {
             revreseMessage: function functionName() {
                 this.message = 'Hello Vue!';
+            },
+            removeList() {
+                this.list.splice(0,1);
             }
         },
         components: {
